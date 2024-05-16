@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'adminlte/base.html' %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        (% block title %)
+
+        (% endblock title %)
+
+    </title>
+</head>
+<body>
+
+<<main class=^container>
+{% block content %}
+ 
+{% endblock %}
+
+</main>
+
+{% block javascript %}
+{{ block.super }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js" 
+integrity="sha512-Rdk63VC+1UYzGSgd3u2iadi0joUrcwX0IWp2rTh6KXFoAmgOjRS99Vynz1lJPT8dLjvo6JZOqpAHJyfCEZ5KoA==" 
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.money').mask('000000,00', {reverse: true});
+    })
+</script>
+{% end block javascript %}
+
+</body>
+</html>
