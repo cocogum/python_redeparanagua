@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
-from .forms import ServicosForm
-from .models import Servicos
+from ..forms.servicos_forms import ServicosForm
+from ..models import Servicos
 
 
 # Create your views here.
