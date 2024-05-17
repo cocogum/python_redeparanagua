@@ -7,4 +7,5 @@ urlpatterns = [
     path('servicos/listar', servicos_views.listar_servicos, name='listar_servicos'),
     path('servicos/editar/<int:id>', servicos_views.editar_servicos, name='editar_servicos'),
     path('usuarios/cadastrar', usuario_views.cadastrar_usuario, name='cadastrar_usuario'),
+    path('usuarios/listar', usuario_views.listar_usuarios, name='cadastrar_usuarios'),
 ]
