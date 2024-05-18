@@ -21,10 +21,10 @@ Listagem de Usuarios
                 {% for usuario in usuarios %}
                     <tr>
                         <td>{{usuario.username}}</td>
-                    <td>
-                        <a href="#">Editar</a>
-                    </td>
-                </tr>
+                        <td>
+                            <a href="{% url 'editar_usuario' usuario.id %}">Editar</a>
+                        </td>
+                    </tr>
                 {% endfor %}
             </tbody>
         </table>
